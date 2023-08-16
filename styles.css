@@ -1,0 +1,31 @@
+body {
+  font-family: "Lora", serif;
+}
+.widget {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+h1 {
+  font-size: 35px;
+}
+h2 {
+  font-size: 20px;
+}
+.search {
+  margin-top: 10px;
+}
+.emojis {
+  font-size: 40px;
+  transition: all 200ms ease-in-out;
+}
+.emojis:hover {
+  opacity: 0.9;
+  transform: scale(1.2);
+}
+.footer {
+  text-align: center;
+  margin-top: -20px;
+}
