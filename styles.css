@@ -1,5 +1,6 @@
 body {
   font-family: "Lora", serif;
+  background: #f4f9f4;
 }
 .widget {
   max-width: 600px;
@@ -16,6 +17,12 @@ h2 {
 }
 .search {
   margin-top: 10px;
+  display: inline;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.form {
+  display: inline;
 }
 .emojis {
   font-size: 40px;
@@ -28,4 +35,13 @@ h2 {
 .footer {
   text-align: center;
   margin-top: -20px;
+}
+.geoButton {
+  display: inline;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.temp {
+  display: inline;
+  font-size: 25px;
 }

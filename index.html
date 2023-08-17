@@ -24,12 +24,12 @@
   <body>
     <div class="container">
       <div class="widget">
-        <h1 id="city"></h1>
+        <h1 id="cityT">La Coruña</h1>
         <h2 class="time">20:14</h2>
-        <h2 id="conditions"></h2>
+        <h2 id="conditions">Clear Skies</h2>
         <div class="row">
           <div class="col-md-6">
-            <div id="temperature"></div>
+            <div id="temperature" class="temp">24°C</div>
             <img
               src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
               alt="Light Cloud Vector"
@@ -41,7 +41,8 @@
             Feels Like: 26°C
           </div>
         </div>
-        <form id="search-form" class="search">
+        <br />
+        <form id="search-form" class="form">
           <input
             id="searchCity"
             type="text"
@@ -51,6 +52,8 @@
           />
           <input type="submit" value="Search" class="search" />
         </form>
+        <span><button class="geoButton">📍</button></span>
+        <br />
         <br />
         <div class="row">
           <div class="col" class="days"><strong>Tues</strong></div>
