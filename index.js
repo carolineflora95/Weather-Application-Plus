@@ -41,6 +41,7 @@ function displayTemperature(response) {
   let speedElement = document.querySelector("#wSpeed");
   let humidityElement = document.querySelector("#humidity");
   let feelElement = document.querySelector("#fLike");
+
   temperatureElement.innerHTML =
     Math.round(response.data.temperature.current) + " °C";
   cityElement.innerHTML = response.data.city;
@@ -50,8 +51,8 @@ function displayTemperature(response) {
   feelElement.innerHTML =
     Math.round(response.data.temperature.feels_like) + "°C";
 }
-
+let cityTitle = "Madrid";
 let apiKey = "9a33fd779e40o2b13tb533b7a79f4beb";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${"Madrid"}&key=${apiKey}&units=metric`;
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityTitle}&key=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);

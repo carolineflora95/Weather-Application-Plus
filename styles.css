@@ -1,6 +1,5 @@
 body {
   font-family: "Lora", serif;
-  background: #f4f9f4;
 }
 .widget {
   max-width: 600px;
@@ -8,6 +7,7 @@ body {
   padding: 30px;
   border: 1px solid black;
   border-radius: 4px;
+  box-shadow: 3px 3px 3px 0.3px rgba(0, 0, 0, 0.3);
 }
 h1 {
   font-size: 35px;
