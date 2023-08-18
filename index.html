@@ -10,7 +10,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,17 +44,33 @@
           </div>
         </div>
         <br />
-        <form id="search-form" class="form">
-          <input
-            id="searchCity"
-            type="text"
-            placeholder="Choose city..."
-            autocomplete="off"
-            autofocus="on"
-          />
-          <input type="submit" value="Search" class="search" />
+        <form id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                id="searchCity"
+                type="search"
+                placeholder="Choose city..."
+                autocomplete="off"
+                autofocus="on"
+                class="form-control"
+              />
+            </div>
+            <div class="col-2">
+              <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+
+            <div class="col-1">
+              <span
+                ><input
+                  id="geoButton"
+                  type="submit"
+                  value="📍"
+                  class="btn btn-primary"
+              /></span>
+            </div>
+          </div>
         </form>
-        <span><button class="geoButton">📍</button></span>
         <br />
         <br />
         <div class="row">

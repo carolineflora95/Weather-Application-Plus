@@ -54,7 +54,7 @@ function displayTemperature(response) {
     Math.round(response.data.temperature.feels_like) + "°";
   iconElement.setAttribute("src", response.data.condition.icon_url);
 }
-let cityTitle = "Shrewsbury";
+let cityTitle = "Leiden";
 let apiKey = "9a33fd779e40o2b13tb533b7a79f4beb";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityTitle}&key=${apiKey}&units=metric`;
 
