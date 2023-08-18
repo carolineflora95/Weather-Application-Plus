@@ -35,12 +35,14 @@ let month = months[now.getMonth()];
 currentTime.innerHTML = `${hours}:${minutes}, ${day} ${date} ${month}, ${year}`;
 
 function displayTemperature(response) {
+  console.log(response.data.condition.icon_url);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#cityT");
   let conditionsElement = document.querySelector("#conditions");
   let speedElement = document.querySelector("#wSpeed");
   let humidityElement = document.querySelector("#humidity");
   let feelElement = document.querySelector("#fLike");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML =
     Math.round(response.data.temperature.current) + " °";
@@ -50,8 +52,9 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.temperature.humidity + "%";
   feelElement.innerHTML =
     Math.round(response.data.temperature.feels_like) + "°";
+  iconElement.setAttribute("src", response.data.condition.icon_url);
 }
-let cityTitle = "Madrid";
+let cityTitle = "Shrewsbury";
 let apiKey = "9a33fd779e40o2b13tb533b7a79f4beb";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityTitle}&key=${apiKey}&units=metric`;
 
