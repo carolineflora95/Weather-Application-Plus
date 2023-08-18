@@ -46,3 +46,7 @@ h2 {
   display: inline;
   font-size: 25px;
 }
+.conversion {
+  display: inline;
+  margin-top: -10px;
+}

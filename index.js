@@ -43,13 +43,13 @@ function displayTemperature(response) {
   let feelElement = document.querySelector("#fLike");
 
   temperatureElement.innerHTML =
-    Math.round(response.data.temperature.current) + " °C";
+    Math.round(response.data.temperature.current) + " °";
   cityElement.innerHTML = response.data.city;
   conditionsElement.innerHTML = response.data.condition.description;
   speedElement.innerHTML = Math.round(response.data.wind.speed) + " Km/h";
   humidityElement.innerHTML = response.data.temperature.humidity + "%";
   feelElement.innerHTML =
-    Math.round(response.data.temperature.feels_like) + "°C";
+    Math.round(response.data.temperature.feels_like) + "°";
 }
 let cityTitle = "Madrid";
 let apiKey = "9a33fd779e40o2b13tb533b7a79f4beb";
