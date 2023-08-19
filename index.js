@@ -91,4 +91,19 @@ fahrenheitLink.addEventListener("click", displayFconversion);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCconversion);
 
+function showPosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+
+  let apiKey = "9a33fd779e40o2b13tb533b7a79f4beb";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+function getCurrentPosition() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let locationButton = document.querySelector("#geoButton");
+locationButton.addEventListener("click", getCurrentPosition);
+
 search("Madrid");
