@@ -34,6 +34,31 @@ let months = [
 let month = months[now.getMonth()];
 currentTime.innerHTML = `${hours}:${minutes}, ${day} ${date} ${month}, ${year}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+         <div class="col-2">
+         <div class="weather-forecast-date">${day}</div>
+         <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png" alt="Sun behind clouds vector" width="42"/>
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperatures-max">
+          18°</span>
+          <span class="weather-forecast-temperatures-min">12°</span>
+        </div>
+        </div>
+         `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   console.log(response.data.condition.icon_url);
   let temperatureElement = document.querySelector("#temperature");
@@ -107,3 +132,4 @@ let locationButton = document.querySelector("#geoButton");
 locationButton.addEventListener("click", getCurrentPosition);
 
 search("A Coruña");
+displayForecast();
