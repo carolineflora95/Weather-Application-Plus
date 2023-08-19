@@ -85,8 +85,7 @@ function displayTemperature(response) {
   conditionsElement.innerHTML = response.data.condition.description;
   speedElement.innerHTML = Math.round(response.data.wind.speed) + " Km/h";
   humidityElement.innerHTML = response.data.temperature.humidity + "%";
-  feelElement.innerHTML =
-    Math.round(response.data.temperature.feels_like) + "°";
+  feelElement.innerHTML = Math.round(response.data.temperature.feels_like);
   iconElement.setAttribute("src", response.data.condition.icon_url);
 
   getForecast(response.data.coordinates);
@@ -102,30 +101,9 @@ function handleSubmit(event) {
   let citySearch = document.querySelector("#searchCity");
   search(citySearch.value);
 }
-function displayFconversion(event) {
-  event.preventDefault();
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
-function displayCconversion(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFconversion);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCconversion);
 
 function showPosition(position) {
   let latitude = position.coords.latitude;
