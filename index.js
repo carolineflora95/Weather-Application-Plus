@@ -106,4 +106,4 @@ function getCurrentPosition() {
 let locationButton = document.querySelector("#geoButton");
 locationButton.addEventListener("click", getCurrentPosition);
 
-search("Madrid");
+search("A Coruña");
